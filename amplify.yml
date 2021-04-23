@@ -1,0 +1,32 @@
+version: 1
+frontend:
+  phases:
+    # IMPORTANT - Please verify your build commands
+    build:
+      commands: []
+  artifacts:
+    # IMPORTANT - Please verify your build output directory
+    baseDirectory: /
+    files:
+      - '**/*'
+  customHeaders:
+    - pattern: '**/*'
+      headers:
+        - key: 'X-Frame-Options'
+          value: 'SAMEORIGIN'
+        - key: 'X-XSS-Protection'
+          value: '1; mode=block'
+        - key: 'X-Content-Type-Options'
+          value: 'nosniff'
+        - key: 'Content-Security-Policy-Report-Only'
+          value: "default-src 'self' https://www.google-analytics.com 'unsafe-inline'; font-src 'self'; img-src 'self' www.google-analytics.com data:; script-src 'self' www.google-analytics.com 'unsafe-inline'; style-src 'self'; report-uri https://godlycloud.uriports.com/reports/report; report-to default"
+        - key: 'NEL'
+          value: '{"report_to":"default","max_age":2592000,"include_subdomains":true,"failure_fraction":1.0}'
+        - key: 'Report-To'
+          value: '{"group":"default","max_age":10886400,"endpoints":[{"url":"https://godlycloud.uriports.com/reports"}],"include_subdomains":true}'
+        - key: 'Expect-CT'
+          value: 'max-age=86400,report-uri="https://godlycloud.uriports.com/reports/report"'
+        - key: 'Permissions-Policy'
+          value: "microphone 'none'; camera 'none'; fullscreen *; payment 'self'"
+  cache:
+    paths: []

@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+FN;CHARSET=UTF-8:Critika Agarwal
+N;CHARSET=UTF-8:Agarwal;Critika;;;
+EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:critika@godly.cloud
+TEL;TYPE=CELL:+91 9461306458
+LABEL;CHARSET=UTF-8;TYPE=WORK:Sanghi Building
+ADR;CHARSET=UTF-8;TYPE=WORK:;;MI Road\, Near Paanch Batti;Jaipur;Rajasthan;302001;India
+TITLE;CHARSET=UTF-8:Snr Analyst\, Founding Team
+ORG;CHARSET=UTF-8:Godly Cloud
+URL;type=WORK;CHARSET=UTF-8:https://godly.cloud
+REV:2020-07-16T08:45:48.145Z
+END:VCARD
